@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+/* Tema Nordestino - cores da logo */
+@theme {
+  --color-nordestino-orange: #c76e2a;
+  --color-nordestino-charcoal: #1a1a1a;
+  --color-nordestino-green: #3d8e2d;
+  --color-nordestino-brown: #6e4a28;
+  --color-nordestino-yellow: #f9d03d;
+  --color-nordestino-cream: #f5e6d3;
+  --font-display: "Outfit", system-ui, sans-serif;
+  --font-body: "DM Sans", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: var(--font-body);
+    @apply antialiased text-white;
+    background-color: var(--color-nordestino-charcoal);
+  }
+  .font-display {
+    font-family: var(--font-display);
+  }
+  /* Títulos de seção consistentes */
+  .section-title {
+    @apply font-display font-bold text-3xl md:text-4xl text-center mb-3;
+    color: var(--color-nordestino-yellow);
+  }
+  .section-subtitle {
+    @apply text-center text-lg mb-12 md:mb-16 max-w-xl mx-auto;
+    color: rgba(245, 230, 211, 0.9);
+  }
+}
+
+.bg-nordestino-orange { background-color: var(--color-nordestino-orange); }
+.bg-nordestino-charcoal { background-color: var(--color-nordestino-charcoal); }
+.bg-nordestino-green { background-color: var(--color-nordestino-green); }
+.text-nordestino-yellow { color: var(--color-nordestino-yellow); }
+.text-nordestino-orange { color: var(--color-nordestino-orange); }
+.text-nordestino-cream { color: var(--color-nordestino-cream); }
+.border-nordestino-orange { border-color: var(--color-nordestino-orange); }
+
+/* Cards e superfícies */
+.card-surface {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  @apply rounded-2xl;
+}
+.card-surface:hover {
+  border-color: rgba(199, 110, 42, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
